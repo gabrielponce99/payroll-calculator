@@ -1,5 +1,32 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class PayrollCalculator {
-    
+    public static void main(String[] args) {
+        //Step 1
+        //Create a Java application named payroll-calculator
+        //that prompts the user to enter:
+        Scanner scanner = new Scanner(System.in);
+
+        //their name
+        System.out.println("Enter your name: ");
+        String name = scanner.nextLine();
+
+        //their hours worked (a floating point number)
+        System.out.println("How many hours have you worked?: ");
+        float hours = scanner.nextFloat();
+
+        //their pay rate (a floating point number)
+        System.out.println("How much is the pay rate?: ");
+        float payRate = scanner.nextFloat();
+
+        //Calculate their gross pay.
+        float paycheck = payRate * hours;
+
+        //Display the employee's name and their gross pay.
+        System.out.println("Your check is: $" + paycheck);
+        System.out.println("Enjoy Las Vegas, " + name + "!");
+
+    }
 }
