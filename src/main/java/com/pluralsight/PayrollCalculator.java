@@ -24,9 +24,20 @@ public class PayrollCalculator {
         //Calculate their gross pay.
         double paycheck = payRate * hours;
 
+        if (hours > 40) {
+            double overtime = hours - 40;
+            double overtimeRate = payRate * 1.5;
+            double overtimePay = overtimeRate * overtime;
+            double totalPay = paycheck + overtimePay;
+            System.out.printf("Your check is: $%.2f\n", totalPay);
+            System.out.printf("Enjoy Las Vegas, %s!", name);
+        } else {
+            System.out.printf("Your check is: $%.2f\n", paycheck);
+            System.out.printf("Enjoy Las Vegas, %s!", name);
+        }
+
         //Display the employee's name and their gross pay.
-        System.out.printf("Your check is: $%.2f\n", paycheck);
-        System.out.printf("Enjoy Las Vegas, %s!", name);
+
 
     }
 }
