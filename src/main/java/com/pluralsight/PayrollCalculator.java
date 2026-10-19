@@ -15,18 +15,18 @@ public class PayrollCalculator {
 
         //their hours worked (a floating point number)
         System.out.println("How many hours have you worked?: ");
-        float hours = scanner.nextFloat();
+        double hours = scanner.nextFloat();
 
         //their pay rate (a floating point number)
         System.out.println("How much is the pay rate?: ");
-        float payRate = scanner.nextFloat();
+        double payRate = scanner.nextFloat();
 
         //Calculate their gross pay.
-        float paycheck = payRate * hours;
+        double paycheck = payRate * hours;
 
         //Display the employee's name and their gross pay.
-        System.out.println("Your check is: $" + paycheck);
-        System.out.println("Enjoy Las Vegas, " + name + "!");
+        System.out.printf("Your check is: $%.2f\n", paycheck);
+        System.out.printf("Enjoy Las Vegas, %s!", name);
 
     }
 }
