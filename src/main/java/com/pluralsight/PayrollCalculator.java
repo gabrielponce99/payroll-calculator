@@ -22,7 +22,7 @@ public class PayrollCalculator {
         double payRate = scanner.nextFloat();
 
         //Calculate their gross pay.
-        double paycheck = payRate * hours;
+        double paycheck = payRate * 40;
 
         if (hours > 40) {
             double overtime = hours - 40;
@@ -35,9 +35,6 @@ public class PayrollCalculator {
             System.out.printf("Your check is: $%.2f\n", paycheck);
             System.out.printf("Enjoy Las Vegas, %s!", name);
         }
-
-        //Display the employee's name and their gross pay.
-
 
     }
 }
